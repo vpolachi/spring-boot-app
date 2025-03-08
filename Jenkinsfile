@@ -13,8 +13,7 @@ pipeline {
 
         stage("Build with Maven") {
             steps {
-                echo "Building the application with Maven..."
-                sh 'mvn clean package'
+                sh '${M2_HOME}/bin/mvn clean package'
             }
         }
     }
