@@ -14,6 +14,7 @@ pipeline {
         stage("Build with Maven") {
             steps {
                 sh '/opt/apache-maven-3.9.9/bin/mvn clean package'
+                sh '/opt/apache-maven-3.9.9/bin/mvn test'
             }
         }
     }
